@@ -1,0 +1,30 @@
+Ballena
+Canguro
+Cebra
+Cerdo
+Conejo
+Elefante
+Erizo
+Foca
+Gorila
+Jirafa
+Koala
+León
+Lobo
+Mapache
+Medusa
+Mono
+Murciélago
+Oso Panda
+Oso Pardo
+Oso Polar
+Pingüino
+Pollo
+Puercoespín
+Pulpo
+Rinoceronte
+Serpiente
+Tigre
+Tortuga
+Venado
+Zorro
