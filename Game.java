@@ -32,10 +32,10 @@ public class Game extends World {
     public Game() {
 
         super(1280, 720, 1);
-        // started();
-
-        addObject(score, 120, 45);
-        addObject(time, 672, 415);
+            // started();
+    
+            addObject(score, 120, 45);
+            addObject(time, 672, 415);
         Adding();
 
     }
@@ -136,7 +136,7 @@ public class Game extends World {
     public void act() {
         if (Greenfoot.isKeyDown("z")) {
             // musicx.pause();
-            Finisher("Te has retirado\n voluntariamente.");
+            Finisher("Te has retirado...");
 
         }
     }

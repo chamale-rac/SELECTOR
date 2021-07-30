@@ -27,8 +27,16 @@ public class Dot extends Actor {
         if (Greenfoot.mouseClicked(this)) {
             if (Stop == "stop_Dificultad") {
                 ((Dificultad) getWorld()).stopped();
+                Greenfoot.setWorld(this.link);
             }
-            Greenfoot.setWorld(this.link);
+            if (Stop == "recharge") {
+                Greenfoot.setWorld(new Dificultad());
+            }
+            if (Stop == "init") {
+                Greenfoot.setWorld(new Inicio("no"));
+            }
+            if (Stop == "stop") {
+            Greenfoot.setWorld(this.link); }
 
         }
     }

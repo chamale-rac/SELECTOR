@@ -1,0 +1,4 @@
+bot1,b1,100
+bot2,b2,10
+bot3,b3,3
+samuel,s,3
