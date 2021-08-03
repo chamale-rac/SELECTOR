@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
 import java.io.File;
 import java.util.Scanner;
 import java.util.*;
@@ -34,7 +33,6 @@ public class Input extends Actor {
             String NameinputValues = JOptionPane.showInputDialog("Cree un nombre de usuario");
             Name = NameinputValues;
 
-
             if (Name == null) {
                 Canceled = true;
             } else {
@@ -57,13 +55,11 @@ public class Input extends Actor {
         try (FileWriter f = new FileWriter("usuarios.txt", true);
                 BufferedWriter b = new BufferedWriter(f);
                 PrintWriter p = new PrintWriter(b);) {
-            p.println(name+","+pass+",0");
+            p.println(name + "," + pass + ",0");
         } catch (IOException i) {
             i.printStackTrace();
         }
-        
-        
 
     }
-    
+
 }

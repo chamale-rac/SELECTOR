@@ -36,7 +36,8 @@ public class Dot extends Actor {
                 Greenfoot.setWorld(new Inicio("no"));
             }
             if (Stop == "stop") {
-            Greenfoot.setWorld(this.link); }
+                Greenfoot.setWorld(this.link);
+            }
 
         }
     }

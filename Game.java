@@ -32,10 +32,10 @@ public class Game extends World {
     public Game() {
 
         super(1280, 720, 1);
-            // started();
-    
-            addObject(score, 120, 45);
-            addObject(time, 672, 415);
+        // started();
+
+        addObject(score, 120, 45);
+        addObject(time, 672, 415);
         Adding();
 
     }
@@ -131,8 +131,7 @@ public class Game extends World {
         // score.getScore();
         Greenfoot.setWorld(new FinishScreen(score.getScore(), razon));
     }
-    
-    
+
     public void act() {
         if (Greenfoot.isKeyDown("z")) {
             // musicx.pause();

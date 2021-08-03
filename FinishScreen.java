@@ -1,6 +1,7 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import javax.swing.JOptionPane;
 import javax.swing.JInternalFrame;
+
 /**
  * Write a description of class FinishScreen here.
  * 
@@ -31,18 +32,19 @@ public class FinishScreen extends World {
 
         Dot replay = new Dot("replay.png", "stop", new Charge());
         addObject(replay, 1216, 57);
-        
+
         Save saver = new Save("save.png", Score);
-        addObject(saver, 669, 510);        
+        addObject(saver, 669, 510);
 
     }
-    
-    public void NoING()
-    {
-        JOptionPane.showMessageDialog(new JInternalFrame(), "Error, credenciales incorrectas","Negativo", JOptionPane.INFORMATION_MESSAGE);
+
+    public void NoING() {
+        JOptionPane.showMessageDialog(new JInternalFrame(), "Error, credenciales incorrectas", "Negativo",
+                JOptionPane.INFORMATION_MESSAGE);
     }
-    public void SiING()
-    {
-        JOptionPane.showMessageDialog(new JInternalFrame(), "Dato guardado, credenciales correctas","Positivo", JOptionPane.INFORMATION_MESSAGE);
+
+    public void SiING() {
+        JOptionPane.showMessageDialog(new JInternalFrame(), "Dato guardado, credenciales correctas", "Positivo",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 }

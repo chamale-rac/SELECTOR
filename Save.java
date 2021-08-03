@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
 import java.io.File;
 import java.util.Scanner;
 import java.util.*;
@@ -47,7 +46,6 @@ public class Save extends Actor {
             String NameinputValues = JOptionPane.showInputDialog("Ingrese un nombre de usuario (existente)");
             Name = NameinputValues;
 
-
             if (Name == null) {
                 Canceled = true;
             } else {
@@ -68,14 +66,12 @@ public class Save extends Actor {
 
     public void Search(String name, String pass, int ss) {
         List<String> list = new ArrayList<String>();
-        
-            ArrayList<ArrayList<String> > x
-                = new ArrayList<ArrayList<String> >();
-        
+
+        ArrayList<ArrayList<String>> x = new ArrayList<ArrayList<String>>();
+
         try {
             File file = new File("usuarios.txt");
             Scanner sc = new Scanner(file);
-            
 
             while (sc.hasNextLine()) {
 
@@ -83,71 +79,65 @@ public class Save extends Actor {
                 list.add(line);
 
             }
-            
-            //FOR ORDER
+
+            // FOR ORDER
             int len = list.size();
-            
-            System.out.println(len);
+
+            // System.out.println(len);
             int allgo = 0;
-            
+
             String man;
-            
-            
-            for (int i = 0; i < len; i++)
-            {
+
+            for (int i = 0; i < len; i++) {
                 man = list.get(i);
                 String[] partes = man.split(",");
-                
+
                 String p0 = partes[0];
                 String p1 = partes[1];
                 String p2 = partes[2];
-                
-                x.add(new ArrayList<String>(
-                Arrays.asList(p0,p1, p2)));
+
+                x.add(new ArrayList<String>(Arrays.asList(p0, p1, p2)));
             }
-            
-            System.out.println(x);
+
+            // System.out.println(x);
             Boolean guardado = false;
-            for (int i = 0; i < len; i++)
-            {
-                
-                    if(( name.equals(x.get(i).get(0)) )&&( pass.equals(x.get(i).get(1)) ))
-                    {
-                        
-                        
-                        x.set(i,new ArrayList<String>(Arrays.asList(name,pass, Integer.toString(ss))));
-                        guardado = true;
-                        System.out.println("pepa");
-                        System.out.println(x.get(i));
-                    }
-                
+            for (int i = 0; i < len; i++) {
+
+                if ((name.equals(x.get(i).get(0))) && (pass.equals(x.get(i).get(1)))) {
+
+                    x.set(i, new ArrayList<String>(Arrays.asList(name, pass, Integer.toString(ss))));
+                    guardado = true;
+                    // System.out.println("pepa");
+                    // System.out.println(x.get(i));
+                }
+
             }
             String texto = "";
-            
-        for (int i = 0; i < len; i++) 
-        {
-            String item0 = String.join(",",x.get(i));
-            if((i+1) == len) {texto = texto + item0;}else{
-            texto = texto + item0 + "\n";}
-        }
-            
+
+            for (int i = 0; i < len; i++) {
+                String item0 = String.join(",", x.get(i));
+                if ((i + 1) == len) {
+                    texto = texto + item0;
+                } else {
+                    texto = texto + item0 + "\n";
+                }
+            }
+
             try (FileWriter f = new FileWriter("usuarios.txt", false);
-                BufferedWriter b = new BufferedWriter(f);
-                PrintWriter p = new PrintWriter(b);) {
-            p.println(texto);
-        } catch (IOException i) {
-            i.printStackTrace();
-        }
-            
-            System.out.println(x);
-            System.out.println(guardado);
-            
-            if(guardado == false) 
-            {
+                    BufferedWriter b = new BufferedWriter(f);
+                    PrintWriter p = new PrintWriter(b);) {
+                p.println(texto);
+            } catch (IOException i) {
+                i.printStackTrace();
+            }
+
+            // System.out.println(x);
+            // System.out.println(guardado);
+
+            if (guardado == false) {
                 ((FinishScreen) getWorld()).NoING();
             }
-            if(guardado == true)
-            {
+            if (guardado == true) {
                 ((FinishScreen) getWorld()).SiING();
             }
         }
@@ -159,10 +149,7 @@ public class Save extends Actor {
         // Collections.shuffle(list);
 
         // int size = list.size();
-      
-        
-        
 
     }
-    
+
 }
